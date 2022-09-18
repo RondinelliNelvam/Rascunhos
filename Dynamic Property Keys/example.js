@@ -16,7 +16,6 @@ object2 = ["a"];
 let algo = dbExample.map((item, index) => {
   for (let i = 0; i < branchExample.length; i++) {
     let key = branchExample[index].branchName;
-
     const calculation = item.allHistoric.reduce(
       (acumulator, currentValue) => {
         acumulator[`totalValueFrom${key}`] += currentValue.quantity;
@@ -27,9 +26,10 @@ let algo = dbExample.map((item, index) => {
     return { ...dbExample, ...calculation };
   }
 });
-console.log(Object.values({ ...algo, ...object2 }));
-console.log("---");
 console.log(Object.values(algo));
+// console.log(Object.values({ ...algo, ...object2 }));
+// console.log("---");
+// console.log(Object.values(algo));
 
 // console.log({ ...algo, ...object2 });
 
