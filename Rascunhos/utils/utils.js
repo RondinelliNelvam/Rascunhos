@@ -34,13 +34,4 @@ branchExample = [
   },
 ];
 
-jsonExampleInString =
-  '{"name":"Person01","email":"person01@someEmail.com","type":"something", "array":[{"ar":"1"}, {"Cr":"2"}]}';
-
-module.exports = {
-  object1,
-  object2,
-  object3,
-  branchExample,
-  jsonExampleInString,
-};
+module.exports = { object1, object2, object3, branchExample };
