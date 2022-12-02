@@ -34,11 +34,12 @@ let array3 = [
 for (let i = 0, j = 1; j < array3.length; i++, j++) {
   for (let a = 0; a < array3[i].length; a++) {
     if (i === 0) {
-      newArrayTwo.push([array3[i][a], Object.values(array3[j][a])]);
+      newArrayTwo.push([array3[i][a]]);
+      console.log(newArrayTwo);
     } else {
-      newArrayTwo[a].push(Object.values(array3[j][a]));
+      // newArrayTwo[a].push(Object.values(array3[i][a]));
     }
   }
 }
-
-console.log(newArrayTwo);
+array3[0][0][Object.keys(array3[0][0])[0]];
+console.log();
