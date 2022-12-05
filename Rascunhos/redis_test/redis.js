@@ -15,16 +15,16 @@ async function getAll() {
   let value = await redisclient.lRange("1", 0, -1);
   // console.log(value);
   let newArray = value.map((element) => JSON.parse(element));
+  newArrayTwo = newArray[0].map((element) => element);
+
   for (let i = 0, j = 1; j < newArray.length; i++, j++) {
-    for (let a = 0; a < newArray[i].length; a++) {
-      if (i === 0) {
-        newArrayTwo.push([newArray[i][a], newArray[j][a]]);
-      } else {
-        newArrayTwo[a].push(newArray[j][a]);
-      }
+    for (let a = 0; a < newArrayTwo.length; a++) {
+      newArrayTwo[a][Object.keys(newArrayTwo[a])[0]].push(
+        ...newArray[j][a][Object.keys(newArray[j][a])[0]]
+      );
     }
   }
-  console.log(newArrayTwo);
+  console.log(newArrayTwo[0]);
 }
-
+// ..newArray[j][a][Object.keys(newArray[j][a])[0]
 getAll();
