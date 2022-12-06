@@ -84,6 +84,7 @@ async function listMajors(auth) {
   console.log("Name, Major:");
   rows.forEach((row) => {
     // Print columns A and E, which correspond to indices 0 and 4.
+    // console.log(row);
     console.log(`${row[0]}, ${row[4]}`);
   });
 }
