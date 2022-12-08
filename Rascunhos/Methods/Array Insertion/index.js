@@ -42,4 +42,6 @@ for (let i = 0, j = 1; j < array3.length; i++, j++) {
   }
 }
 array3[0][0][Object.keys(array3[0][0])[0]];
-console.log();
+console.log(array3[0][0]);
+
+//ISSO É UM OBJETO

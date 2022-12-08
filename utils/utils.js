@@ -37,10 +37,30 @@ branchExample = [
 jsonExampleInString =
   '{"name":"Person01","email":"person01@someEmail.com","type":"something", "array":[{"ar":"1"}, {"Cr":"2"}]}';
 
+itemList = [
+  {
+    quantity: 10,
+    itemId: 5,
+  },
+  {
+    quantity: 5,
+    itemId: 4,
+  },
+  {
+    quantity: 5,
+    itemId: 3,
+  },
+  {
+    quantity: 10,
+    itemId: 2,
+  },
+];
+
 module.exports = {
   object1,
   object2,
   object3,
   branchExample,
   jsonExampleInString,
+  itemList,
 };
