@@ -34,10 +34,8 @@ let array3 = [
 ];
 
 newArrayTwo = array3[0].map((element) => element);
-// console.log(newArrayTwo.length);
-// console.log(array3.length);
+
 for (let i = 0, j = 1; j < array3.length; i++, j++) {
-  // console.log(newArrayTwo);
   for (let a = 0; a < newArrayTwo.length; a++) {
     newArrayTwo[a][Object.keys(newArrayTwo[a])[0]].push(
       ...array3[j][a][Object.keys(array3[j][a])[0]]
@@ -45,14 +43,37 @@ for (let i = 0, j = 1; j < array3.length; i++, j++) {
   }
 }
 console.log(Object.keys(newArrayTwo[0]));
-// newArrayTwo[0].teste.push(...[3, 4]);
 console.log(newArrayTwo);
-// array3[0][0][Object.keys(array3[0][0])[0]];
-// const algo = Object.assign(array3[0][0].teste, array3[1][0].teste);
-// console.log(array3[0][0][Object.keys(array3[0][0])[0]]);
-// console.log(Object.keys(array3[0][0])[0]);
-// console.log(algo);
-// console.log(array3[0][0].teste);
-// array3[i][a][Object.keys(array3[i][a])[0]].push(
-//   ...array3[j][a][Object.keys(array3[j][a])[0]]
-// );
+
+volt_grd_in,
+  amp_grd,
+  power_grd,
+  energy_grd,
+  volt_pv01,
+  amp_pv,
+  watt_pv01,
+  watt_total,
+  volt_bar,
+  soc,
+  watt_b,
+  energy_pv,
+  volt_inv_out,
+  amp_inv_out,
+  watt_inv_out,
+  sys_bat,
+  amp_byp,
+  temp,
+  amp_b01,
+  amp_b,
+  status,
+  dps1,
+  dps2,
+  dps3,
+  fc,
+  dj14,
+  dj15,
+  false,
+  dj3,
+  autonomy;
+
+1, 1, 1, 1, 1;
