@@ -42,8 +42,15 @@ for (let i = 0, j = 1; j < array3.length; i++, j++) {
     );
   }
 }
+<<<<<<< HEAD
+array3[0][0][Object.keys(array3[0][0])[0]];
+console.log(array3[0][0]);
+
+//ISSO É UM OBJETO
+=======
 console.log(Object.keys(newArrayTwo[0]));
 console.log(newArrayTwo);
+<<<<<<< HEAD
 
 volt_grd_in,
   amp_grd,
@@ -77,3 +84,15 @@ volt_grd_in,
   autonomy;
 
 1, 1, 1, 1, 1;
+=======
+// array3[0][0][Object.keys(array3[0][0])[0]];
+// const algo = Object.assign(array3[0][0].teste, array3[1][0].teste);
+// console.log(array3[0][0][Object.keys(array3[0][0])[0]]);
+// console.log(Object.keys(array3[0][0])[0]);
+// console.log(algo);
+// console.log(array3[0][0].teste);
+// array3[i][a][Object.keys(array3[i][a])[0]].push(
+//   ...array3[j][a][Object.keys(array3[j][a])[0]]
+// );
+>>>>>>> a4a71de8854866cd1accc033b87aef931ce8688a
+>>>>>>> ef74d93af4e57d75a7f0a56fae12ed3410f78206

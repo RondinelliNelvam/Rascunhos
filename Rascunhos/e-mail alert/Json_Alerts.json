@@ -1,0 +1,55 @@
+{
+    "Colaborador": {
+        "dataNascimento": {
+        "types": ["month","weekly","day"],
+        "addon": ["nome"]
+        },
+        "dataVencimetoAso": {
+            "types":["month"],
+            "addon":["nome","FuncaoId","SituacaoId","emailPso","telefone" ]
+        }
+    },
+    "Ativo":{
+        "validadeEpi":{
+        "types":["month"],
+        "addon":["id","nome","descricao","FuncaoId","SituacaoId","emailPso","telefone","dataVencimetoAso","Agrupamento.nmAgrupamento"]
+    }
+},
+    "Projeto":{
+        "dataFim":{
+            "types":["month","weekly","day"],
+            "addon":["id","ns","nmProjeto","Cliente.nmCliente","ProjetoContato.id['ClienteContato.nmPessoa','ClienteContato.email']","ProjetoStatus.nmStatusProjeto"]
+
+        }
+    },
+    "ProjetoParcela":{
+        "dataFaturamento":{
+            "types":["month"],
+            "addon":["ProjetoId","Projeto","nmProjeto","ns","Cliente.mCliente","vlParcela","percDoVlTotal","isFaturado"]
+        }
+    },
+    "ProjetoArt":{
+        "dataBaixa":{
+            "types":["month","weekly","day"],
+            "addon":["nArt","dataRegistro","dataVencimento","status","assCliente","assResponsavel","Projeto.dataFim","Projeto.ns"]
+        }
+    },
+    "ProjetoTarefas":{
+        "dataFim":{
+            "types":["month","weekly","day"],
+            "addon":["projeto.ns","projeto.id","Colaborador.nome","Colaborador.emailPso","TarefasEntregaveis.nmTarefa","TarefaStatus.status"] 
+        }
+    },
+    "Treinamento":{
+        "validade":{
+            "types":["month"],
+            "addon":["CursoId.Nome","InstrutorId.Nome","TreinamentoColaborador.Id.Nome","TreinamentoAnexo.nmAnexo"] 
+        }
+
+    }
+
+
+
+
+}
+
