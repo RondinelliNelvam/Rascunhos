@@ -1,4 +1,5 @@
 var CronJob = require("cron").CronJob;
+var moment = require("moment");
 
 const listaSemanal = {
   "Segunda-Feira": 1,
@@ -97,6 +98,18 @@ const { sendEmail } = require("./emails");
 
 let Alerts = {
   Colaborador: async function (req) {
+    const dataInicio = new Date(
+      moment().subtract(1, "days").format("YYYY-MM-DD")
+    );
+    console.log(dataInicio);
+    const dataFim = new Date(
+      moment(new Date(moment().format("YYYY-MM-DD")))
+        .subtract(1, "seconds")
+        .format("YYYY-MM-DD HH:mm:ss")
+    );
+
+    console.log(dataFim);
+
     const checkvalue = req;
     const range = JSON.parse(checkvalue.range);
     let checkToSendEmail = false;
@@ -141,15 +154,15 @@ let Alerts = {
 };
 
 //APLICAR SWITCH PARA VERIFICAÇÃO DO TIPO (DIARIO,SEMANAL,MENSAL)
-const testeMinuto = 2;
-var teste = new CronJob(
-  `*/${testeMinuto} * * * * *`,
-  function () {
-    Alerts[jsonFrontEnd.tables](jsonFrontEnd);
-  },
-  null,
-  true,
-  "UTC-1"
-);
+// const testeMinuto = 2;
+// var teste = new CronJob(
+//   `*/${testeMinuto} * * * * *`,
+//   function () {
+//     Alerts[jsonFrontEnd.tables](jsonFrontEnd);
+//   },
+//   null,
+//   true,
+//   "UTC-1"
+// );
 
 Alerts[jsonFrontEnd.tables](jsonFrontEnd);
